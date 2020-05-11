@@ -11,14 +11,25 @@ function contact(firstname, lastname, number, numberstring){
                 lastname,
                 numberstring,
             };
-            //var juusto = JSON.parse("[", "<li>" + full + "</li>", "]");
+            full[0] ="<li>" + firstname + "</li>";
+            full[1] ="<li>" + lastname + "</li>";
+            full[2] ="<li>" + numberstring + "</li>";
             return full;
+            //return full;
         } else {
             var full = {
                 firstname,
                 lastname,
                 numberstring,
               };
+              firstname ="<li> " + firstname + " </li>";
+              lastname ="<li> " + lastname + " </li>";
+              numberstring ="<li> " + numberstring + " </li>";
+              var full = {
+                  firstname,
+                  lastname,
+                  numberstring
+              }
               return full;
         }
     } else {
@@ -28,7 +39,6 @@ function contact(firstname, lastname, number, numberstring){
             lastname,
             numberstring,
           };
-          return full;
     }
 }
 module.exports =contact;

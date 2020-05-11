@@ -7,13 +7,13 @@ test('Etunimi tai sukunimi puuttuu', () => {
 });
 
 test('Testaa antaa perustiedot sekä puhelinnumero', () => {
-    expect(contact(firstname = "Ville", lastname = "Aaltonen", number = "0401260700")).toEqual({
-        firstname: "Ville",
-        lastname: "Aaltonen",
-        numberstring: "0401260700"  
+    expect(contact("Ville","Aaltonen","0401260700")).toEqual({
+        firstname: "<li> Ville </li>",
+        lastname: "<li> Aaltonen </li>",
+        numberstring: "<li> 0401260700 </li>"  
     });
 });
-test('Testaa tiedot', () => {
-    (contact(firstname = "Ville", lastname = "Aaltonen", number = "0401260700"))
-    expect(contact(juusto).toContain('Ville', 'Aaltonen', '0401260700'));
-  });
+//  test('Testaa tiedot', () => {
+//     (contact("Ville","Aaltonen","0401260700"))
+//     expect(contact(juusto).toContain('Ville', 'Aaltonen', '0401260700'));
+//    });
